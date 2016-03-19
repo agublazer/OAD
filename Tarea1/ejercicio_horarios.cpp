@@ -4,7 +4,6 @@ using namespace std;
 float convertir_minutos(float hora)
 {
     int hora_1 = hora;
-    float minutos = hora_1*60 + (hora - hora_1)*100;
     return hora_1*60 + (hora - hora_1)*100;
 }
 
