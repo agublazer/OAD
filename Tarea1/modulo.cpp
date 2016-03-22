@@ -19,10 +19,6 @@ int modMult(int numA, int numB,int mod){
     return res;
 }
 
-int opciones(){
-    std::cout << "Elija una opcion:\n";
-}
-
 int main(){
     int opcion;
     int numA;
