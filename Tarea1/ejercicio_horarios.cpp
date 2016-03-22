@@ -14,25 +14,23 @@ void convertir_horas(int minutos,bool formato)
     hora = minutos/60;
     if (formato==true)
     {
-        if (minutos_1<10 and hora<10)
-            cout<<"0"<<hora<<":"<<"0"<<minutos_1;
-        if (minutos_1>=10 and hora<10)
-            cout<<"0"<<hora<<":"<<minutos_1;
-        if (minutos_1<10 and hora>=10)
-            cout<<hora<<":"<<"0"<<minutos_1;
-        if (minutos_1>=10 and hora>=10)
-            cout<<hora<<":"<<minutos_1;
+		if ( hora < 10 )
+			cout << "0";
+		cout << hora << ":";
+		if ( minutos_1 < 10)
+			cout << "0";
+		cout << minutos_1;	
     }
     if (formato==false)
     {
-        if ((minutos/60)>12 and minutos_1<10)
-            cout<<(minutos/60)-12<<":"<<"0"<<minutos_1<<" pm";
-        if ((minutos/60)>12 and minutos_1>=10)
-            cout<<(minutos/60)-12<<":"<<minutos_1<<" pm";
-        if ((minutos/60)<=12 and minutos_1<10)
-            cout<<(minutos/60)<<":"<<"0"<<minutos_1<<" am";
-        if ((minutos/60)<=12 and minutos_1>=10)
-            cout<<(minutos/60)<<":"<<minutos_1<<" am";
+        if (hora > 12 and minutos_1 < 10)
+            cout << hora-12 << ":" << "0" << minutos_1 << " pm";
+        if (hora > 12 and minutos_1 >= 10)
+            cout << hora-12 << ":" << minutos_1 << " pm";
+        if (hora <= 12 and minutos_1 < 10)
+            cout << hora << ":" << "0" << minutos_1 << " am";
+        if (hora <= 12 and minutos_1 >= 10)
+            cout << hora << ":" << minutos_1 << " am";
 
     }
 
