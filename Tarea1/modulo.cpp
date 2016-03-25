@@ -6,9 +6,9 @@ int modSuma(int numA, int numB, int mod){
 }
 
 int modResta(int numA, int numB,int mod){
-    int res = (numA) - (numB);
-    if (res < 0){ //Si es negativo se convirte en positivo
-        res= mod +res;
+    int res = numA - numB;
+    while (res < 0){ //Si es negativo se convirte en positivo
+        res+=mod;
     }
     res%=mod;
     return res;
