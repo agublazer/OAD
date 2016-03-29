@@ -68,24 +68,34 @@ void romanos(int num, int &dig)
     }
 }
 
-void conversionaromanos(int &num, int &dig)
+int numerocifras(int num)
 {
-    int rest;
-    while(dig!=0)
+    int digits;
+    if(num/1000 >= 1)
     {
-        rest = resto(num, dig);
-        romanos(rest, dig);
-
+        digits = 4;
+        return digits;
     }
+    if(num/100 >= 1)
+    {
+        digits = 3;
+        return digits;
+    }
+    if(num/10 >= 1)
+    {
+        digits = 2;
+        return digits;
+    }
+    digits = 1;
+    return digits;
 }
 
 int main()
 {
     int numero, digitos, convertir;
-    cout<<"Ingrese la cantidad de cifras: " ;
-    cin>>digitos; cout<<endl;
     cout<<"Ingrese el numero que desea convertir: ";
     cin>>numero; cout<<endl;
+    digitos = numerocifras(numero);
     conversionaromanos(numero,digitos);
 
 

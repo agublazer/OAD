@@ -1,14 +1,14 @@
 #include <iostream>
 
 int modSuma(int numA, int numB, int mod){
-    int res = numA%mod + numB%mod;
+    int res = (numA + numB)%mod;
     return res;
 }
 
 int modResta(int numA, int numB,int mod){
     int res = numA - numB;
-    if (res < 0){ //Si es negativo se convirte en positivo
-        res*=-1;
+    while (res < 0){ //Si es negativo se convirte en positivo
+        res+=mod;
     }
     res%=mod;
     return res;
