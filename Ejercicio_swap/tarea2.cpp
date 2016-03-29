@@ -3,12 +3,12 @@ using namespace std;
 
 void fswap(int *A,int *B)
 {
-    int *temp;
+    int temp;
     if(*A>*B)
     {
-        *temp=*A;
+        temp=*A;
         *A=*B;
-        *B=*temp;
+        *B=temp;
     }
 }
 
