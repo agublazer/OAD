@@ -1,20 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
-#include <algorithm>
 
 using namespace std;
-
-const int t= 400;
-
-int *lista;
-
-void crearLista()
-{
-    lista = new int [t];
-    for(int i=0;i<t;i++)
-        lista[i]= rand()%100+1;
-
-}
 
 int divide(int *array, int inicio, int fin) {
     int izquierda;
@@ -60,7 +47,12 @@ void quicksort(int *array, int inicio, int fin)
 }
 int main()
 {
-    crearLista();
+    int t= 10;
+    int *lista;
+    lista=new int[t];
+    for(int i=0;i<t;i++)
+        lista[i]=rand()%100+1;
+
     quicksort(lista,0, t-1);
     for(int i=0;i<t;i++)
         cout<<lista[i]<<" ";
