@@ -16,9 +16,9 @@ void i_sort(int *lista,int n)
     int j, temp;
 	for (int i=0;i<n; i++)
     {
-		j = i;
-		while (j > 0 and lista[j] < lista[j-1])
-		{
+	j = i;
+	while (j > 0 and lista[j] < lista[j-1])
+	{
             temp = lista[j];
             lista[j] = lista[j-1];
             lista[j-1] = temp;
