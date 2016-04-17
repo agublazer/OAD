@@ -122,11 +122,11 @@ int ListaDE::deleteNode(int n)
 bool ListaDE::isInList(int n)
 {
     Nodo *tmp= front;
-    while(tmp != 0 and !(tmp->val == n ))
+    while(tmp != nullptr and !(tmp->val == n ))
     {
         tmp = tmp->next;
     }
-    if (tmp !=0)
+    if (tmp != nullptr)
         return true;
     return false;
 }
