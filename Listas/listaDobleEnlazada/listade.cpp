@@ -91,11 +91,11 @@ int ListaDE::deleteNode(int n)
         if (front == back and n == front->val)
         {
             delete front;
-            front = back = 0;
+            front = back = nullptr;
         }
         else if (n == front->val)
         {
-            Nodo *tmp = front->next;
+            Nodo *tmp = front;
             front = front->next;
             delete tmp;
         }
