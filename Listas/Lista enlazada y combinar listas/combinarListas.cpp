@@ -1,4 +1,4 @@
-#include"ListaEnlazada.cpp"
+#include"ListaEnlazada.h"
 
 Nodo * combinar_listas(ListaEnlazada *L1,ListaEnlazada *L2)
 {
