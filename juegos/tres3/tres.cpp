@@ -12,10 +12,13 @@ void fun::obtener(int &x, int &y, int &z) {
 }
 
 int tres::lim(int a) {
+    cout <<"A: " << a << endl;
     if (a < 0)
-        return (a += 3);
+        return (a + 3);
     else if (a > 3)
-        return (a -= 3);
+        return (a - 3);
+    else
+        return a;
 }
 
 tres::tres() {
@@ -103,12 +106,13 @@ bool tres::verificar() {// +1 ,-1 o 0
         }
     }
 
-    int i;
-    int j;
-    int k;//PODRIA USAR LOS MISMOS DE ARRIBA
+    int i = 0;
+    int j = 0;
+    int k = 0;//PODRIA USAR LOS MISMOS DE ARRIBA
 
     while (!validos.empty()) {
         validos.obtener(i, j , k);
+
         i = lim(_i + i * 2);
         j = lim(_j + j * 2);
         k = lim(_k + k * 2);
@@ -140,7 +144,7 @@ inicio:
             do {
                 system("clear");
                 printPart();
-                cout << "Ingresa la fila y columna: ";
+                cout << "Ingresa la columna y fila: ";
                 cin >> _k;
                 cin >> _j;
 
