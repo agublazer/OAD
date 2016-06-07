@@ -151,11 +151,13 @@ inicio:
 
             tab[_i][_j][_k] = simb();
 
-            if (verificar()) {
-                system("clear");
-                cout << "GANA " << simb() << endl;
-                printTabl();
-                return;
+            if(jugadas > 3) { // no puedes ganar antes de las 4 jugadas, 'jugadas' empieza en 0
+                if (verificar()) {
+                    system("clear");
+                    cout << "GANA " << simb() << endl;
+                    printTabl();
+                    return;
+                }
             }
 
             turno = !turno;
