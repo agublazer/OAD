@@ -17,9 +17,12 @@ int main() {
     while (!cartas.vacio()) {
         cout << cartas.quitar() << endl;
     }
-     cout << "-----" << endl;
+    cout << "-----" << endl;
+
+
+
     Mazo<Naipes> barajaNaipes;
-    Naipes cc[52];
+    Naipes *cc = new Naipes[52];
 
     char palo[] = {'E','C','T', 'D'};
     for (int j = 0; j < 4; j++) {
@@ -34,4 +37,5 @@ int main() {
         cout << tmp.palo<< " " << tmp.num<< endl;
     }
 
+    delete[] cc;
 }

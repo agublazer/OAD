@@ -26,6 +26,7 @@ void Mazo<T>::barajar(T *arr,int ncartas){
         arr[i] = arr[r];
         arr[r] = tmp;
     }
+
     for (int i = 0; i < ncartas; i++) {
         agregar(arr[i]);
     }
@@ -35,33 +36,3 @@ template<typename T>
 bool Mazo<T>::vacio() {
     return cartas.empty();
 }
-
-
-
-// void Barajar::swap(int &a, int &b){
-//     int tmp = a;
-//     a = b;
-//     b = tmp;
-// }
-
-// Pila<int> Barajar::operator()(int *arr, int cantidad,int veces ){
-//     srand (time(NULL));
-//     int r;
-//     Pila<int> pila;
-
-//     for(int i =0; i< veces; i++) {
-//         for (int j = 0; j < cantidad; j++) {
-//             r = rand()%cantidad;
-//             swap(arr[j], arr[r]);
-//         }
-//     }
-//     for (int i =0 ;i < cantidad; i++) {
-//          cout << arr[i]<< endl;;
-//     }
-//     cout << "*******" << endl;
-//     for (int i =0 ;i < cantidad; i++) {
-//          pila.push(arr[i]);
-//     }
-//     return pila;
-// }
-

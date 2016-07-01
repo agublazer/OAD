@@ -2,6 +2,7 @@
 #define UNO_H
 
 #include "pila/pila.h"
+#include "lista/lista.h"
 #include "mazo/mazo.h"
 
 struct CartaUno {
@@ -13,23 +14,25 @@ struct CartaUno {
 
 class Uno{
 private:
+    int jug;
+    int turno;
+    bool direccion;
     Mazo<CartaUno> mazo;
+    Mazo<CartaUno> mesa;
+    Lista<CartaUno> *manos; 
+
     void cancelarTurno();
     void aumentarCartas(int n);
     void cambiarSentido();
+
+    void repartirCartas();
+    void sgtTurno();
 public:
     Uno(int nJug);
-
-
-
+    void partida();
 };
 
 #endif //UNO_H
-
-
-// Lunes  20: Josefo, Reversi, Arbol, Ordenamiento
-// Martes 21: 4 en raya, 3 en raya 3D, Dado, Bingo
-// Martes 28: Baraja, Uno, Areas PF, Areas Functor
 
 //-----------
 //l  COLOR  l 
